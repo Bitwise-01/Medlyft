@@ -1,0 +1,13 @@
+# VS Code 
+*.vscode 
+
+# Virtual environment 
+env_med
+
+
+# Python extras
+__pycache__
+
+
+# mysql installer 
+mysql-installer-web*

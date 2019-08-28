@@ -1,0 +1,31 @@
+{% extends "base.html" %} {% block links %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/driver.css') }}" />
+<script src="{{ url_for('static', filename='js/driver.js') }}" defer></script>
+{% endblock %} {% block title %} MedLyft - Home {% endblock %} {% block navbar %}
+<li><a href="#" class="active-tab">Home</a></li>
+<li><a href="#">Settings</a></li>
+{% endblock %} {% block content %}
+<div id="display">
+    <div id="tabs-container">
+        <ul id="tabs">
+            <li class="active-tab" onclick="location.href='/'">Drivers</li>
+            <li onclick="location.href='/patients'">Patients</li>
+            <li onclick="location.href='/tasks'">Tasks</li>
+        </ul>
+    </div>
+
+    <span id="driver-id" hidden>{{ driver_id }}</span>
+
+    <div id="view">
+        <div id="driver-info"></div>
+        <div id="current-task"></div>
+        <div id="new-task"></div>
+        <div id="tasks-queue"></div>
+        <div id="log"></div>
+    </div>
+
+    {% with messages = get_flashed_messages() %} {% if messages %}
+    <p id="last-active">last accessed on {{ messages[0] }}</p>
+    {% endif %} {% endwith %}
+</div>
+{% endblock %}

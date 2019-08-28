@@ -1,0 +1,198 @@
+@import url('main.css');
+
+#container {
+    padding-top: 4%;
+}
+
+#display {
+    width: 95%;
+    margin: auto;
+    height: 665px;
+    margin-top: 1%;
+    overflow: auto;
+    border-radius: var(--btn-radius);
+    background-color: var(--navbar-color);
+}
+
+#tabs {
+    margin-top: 0.5%;
+}
+
+#tabs li {
+    min-width: 5%;
+    font-size: 14px;
+    list-style: none;
+    padding: 0.8% 1.2%;
+    margin-right: 0.2%;
+    text-align: center;
+    display: inline-block;
+    font-family: Comfortaa, cursive;
+    border-radius: var(--btn-radius);
+}
+
+#tabs li:hover {
+    cursor: pointer;
+    background-color: var(--navbar-hover);
+}
+
+#tabs li.active-tab {
+    background-color: var(--navbar-hover);
+}
+
+#view {
+    width: 95%;
+    height: 535px;
+    display: grid;
+    overflow: auto;
+    margin: 1.52% auto;
+    margin-bottom: 5px;
+    font-family: Comfortaa, cursive;
+    background-color: var(--navbar-hover);
+    grid-template-columns: 1fr 1.5fr 1fr 1.8fr;
+    grid-template-rows: 0.2fr 0.5fr 0.5fr 0.5fr;
+
+    grid-template-areas:
+        'driver-info current-task current-task current-task'
+        'new-task new-task new-task new-task'
+        'new-task new-task new-task new-task'
+        'tasks-queue tasks-queue log log';
+}
+
+#driver-info {
+    padding: 2%;
+    overflow: hidden;
+    grid-area: driver-info;
+}
+
+#driver-name {
+    padding: 5%;
+}
+
+.online-status {
+    padding: 6% 5%;
+}
+
+.status-color-online {
+    border: 1.8px solid rgb(51, 51, 51, 0.45);
+    background-color: var(--success);
+}
+
+.status-color-offline {
+    border: 1.8px solid rgb(51, 51, 51, 0.45);
+    background-color: var(--gray);
+}
+
+.status-color-online,
+.status-color-offline {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.status-phrase {
+    color: #fff;
+}
+
+#current-task {
+    overflow: auto;
+    grid-area: current-task;
+    border-left: 1px solid #fff;
+}
+
+#current-task p {
+    margin: 2% auto;
+    text-align: center;
+}
+
+#new-task {
+    overflow: auto;
+    grid-area: new-task;
+}
+
+table {
+    width: 100%;
+    margin: auto;
+    table-layout: fixed;
+    background-color: #fff;
+    border-collapse: collapse;
+    font-family: 'Comfortaa', cursive;
+}
+
+table tr:nth-child(even) {
+    color: #000;
+    background-color: #fff;
+}
+
+table tr:nth-child(odd) {
+    color: #fff;
+    background-color: var(--navbar-color);
+}
+
+table th {
+    color: #fff;
+    font-size: 14px;
+    padding: 1.5% 1.1%;
+}
+
+td {
+    font-size: 13.5px;
+    text-align: center;
+    padding: 1.37% 0.9%;
+    word-wrap: break-word;
+}
+
+.patient:hover {
+    cursor: pointer;
+}
+
+.patient:active {
+    cursor: default;
+}
+
+#tasks-queue {
+    overflow: auto;
+    grid-area: tasks-queue;
+}
+
+#log {
+    overflow: auto;
+    grid-area: log;
+}
+
+.time-created {
+    font-weight: bolder;
+}
+
+.log-data {
+    margin: auto;
+    font-size: 12px;
+    padding: 3.35% 1%;
+}
+
+.log-data:not(:last-child) {
+    border-bottom: 1px solid #fff;
+}
+
+.log-msg {
+    overflow: auto;
+}
+
+.log-data > span {
+    padding-left: 2%;
+    display: block;
+}
+
+/* Medium Screen */
+@media (max-width: 767px) {
+    #container {
+        padding-top: 20%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    #container {
+        padding-top: 14%;
+    }
+}

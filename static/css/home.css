@@ -1,0 +1,125 @@
+@import url('main.css');
+
+#container {
+    padding-top: 4%;
+}
+
+#display {
+    width: 95%;
+    margin: auto;
+    height: 665px;
+    margin-top: 1%;
+    overflow: auto;
+    border-radius: var(--btn-radius);
+    background-color: var(--navbar-color);
+}
+
+#tabs {
+    margin-top: 0.5%;
+}
+
+#tabs li {
+    min-width: 5%;
+    font-size: 14px;
+    list-style: none;
+    padding: 0.8% 1.2%;
+    margin-right: 0.2%;
+    text-align: center;
+    display: inline-block;
+    font-family: Comfortaa, cursive;
+    border-radius: var(--btn-radius);
+}
+
+#tabs li:hover {
+    cursor: pointer;
+    background-color: var(--navbar-hover);
+}
+
+#tabs li.active-tab {
+    cursor: default;
+    background-color: var(--navbar-hover);
+}
+
+#view {
+    width: 95%;
+    height: 535px;
+    display: flex;
+    overflow: auto;
+    flex-wrap: wrap;
+    margin: 1.52% auto;
+    margin-bottom: 5px;
+    justify-content: center;
+    background-color: var(--navbar-hover);
+}
+
+.driver {
+    margin: 1.5%;
+    height: 258px;
+    height: 135px;
+    overflow: auto;
+    font-size: 16px;
+    max-width: 258px;
+    min-width: 258px;
+    border-radius: 4px;
+    display: inline-block;
+    background-color: #fff;
+    font-family: Source Sans Pro, sans-serif;
+}
+
+.driver:hover {
+    cursor: pointer;
+    background-color: #e8e8e8;
+}
+
+.driver .info-container {
+    border-bottom: 1px solid #636363;
+}
+
+.driver .info {
+    color: #000;
+    margin-left: 5%;
+}
+
+.info.id {
+    font-size: 12px;
+}
+
+.driver .online-status {
+    padding: 6% 5%;
+}
+
+.driver .status-color-online {
+    border: 1.8px solid rgb(51, 51, 51, 0.45);
+    background-color: var(--success);
+}
+
+.driver .status-color-offline {
+    border: 1.8px solid rgb(51, 51, 51, 0.45);
+    background-color: var(--gray);
+}
+
+.driver .status-color-online,
+.driver .status-color-offline {
+    width: 15px;
+    height: 15px;
+    margin-right: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.status-phrase {
+    color: #000;
+}
+
+/* Medium Screen */
+@media (max-width: 767px) {
+    #container {
+        padding-top: 20%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    #container {
+        padding-top: 14%;
+    }
+}

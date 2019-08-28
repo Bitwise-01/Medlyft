@@ -1,0 +1,194 @@
+@charset "utf-8";
+@import url('navbar.css');
+
+/* Fonts */
+@font-face {
+    font-family: Comfortaa;
+    src: url('../font/Comfortaa.ttf');
+}
+
+@font-face {
+    font-family: Dosis;
+    src: url('../font/Dosis.ttf');
+}
+
+/* Variables */
+:root {
+    --btn-radius: 3px;
+    --dp-red: #8b0000;
+    --drk-red: #dc3545;
+    --primary: #007bff;
+    --bg-color: #121212;
+    --btn-hover: #2681ba;
+    --txt-color: #ffffff;
+    --btn-color: #2f94c3;
+    --conta-color: #1f2226;
+    --navbar-color: #202020;
+    --navbar-hover: #0f0f0f;
+
+    /* Bootstrap */
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+}
+
+body {
+    color: var(--txt-color);
+    background-color: var(--bg-color);
+}
+
+#logo {
+    display: block;
+    margin-top: 10%;
+    margin-bottom: -15px;
+}
+
+#logo a {
+    font-size: 45px;
+    text-decoration: none;
+    color: var(--btn-color);
+    font-family: 'Dosis', sans-serif;
+}
+
+#logo img {
+    width: 60px;
+    height: 60px;
+}
+
+#last-active {
+    font-size: 13px;
+    margin: 18px auto;
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+}
+
+#overlay {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    display: none;
+    position: fixed;
+    background-color: rgba(25, 25, 25, 0.588);
+}
+
+#popup {
+    top: 40%;
+    left: 50%;
+    color: #fff;
+    padding: 1.5% 2%;
+    position: absolute;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+}
+
+#popup p {
+    color: #000;
+    font-size: 1.3em;
+    font-family: 'Comfortaa', cursive;
+}
+
+#popup button {
+    border: none;
+    color: #fff;
+    outline: none;
+    font-size: 15px;
+    margin: 5px 20px;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-family: 'Comfortaa', cursive;
+}
+
+#popup button:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+#yes {
+    background-color: var(--drk-red);
+}
+
+#yes:hover {
+    background-color: var(--dp-red);
+}
+
+#no {
+    background-color: #000;
+}
+
+#no:hover {
+    background-color: #444;
+}
+
+/* Flash Message */
+.message {
+    display: block;
+    margin-top: 15px;
+    padding-left: 10px;
+    font-family: 'Comfortaa', cursive;
+}
+
+.intro {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+}
+
+.error {
+    color: var(--drk-red);
+}
+
+.success {
+    color: #28a745;
+}
+
+/* Input Response */
+.error-msg {
+    box-shadow: 0 0 3px 3px var(--drk-red);
+}
+
+.success-msg {
+    box-shadow: 0 0 3px 3px #28a745;
+}
+
+/* Scroll */
+::-webkit-scrollbar {
+    width: 1px;
+    height: 1.5px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #fff;
+}
+
+@media (max-width: 767px) {
+    .message {
+        font-size: 10px;
+    }
+}

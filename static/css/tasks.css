@@ -1,0 +1,95 @@
+@import url('main.css');
+
+#container {
+    padding-top: 4%;
+}
+
+#display {
+    width: 95%;
+    margin: auto;
+    height: 665px;
+    margin-top: 1%;
+    overflow: auto;
+    border-radius: var(--btn-radius);
+    background-color: var(--navbar-color);
+}
+
+#tabs {
+    margin-top: 0.5%;
+}
+
+#tabs li {
+    min-width: 5%;
+    font-size: 14px;
+    list-style: none;
+    padding: 0.8% 1.2%;
+    margin-right: 0.2%;
+    text-align: center;
+    display: inline-block;
+    font-family: Comfortaa, cursive;
+    border-radius: var(--btn-radius);
+}
+
+#tabs li:hover {
+    cursor: pointer;
+    background-color: var(--navbar-hover);
+}
+
+#tabs li.active-tab {
+    cursor: default;
+    background-color: var(--navbar-hover);
+}
+
+#view {
+    width: 95%;
+    height: 535px;
+    overflow: auto;
+    margin: 1.52% auto;
+    margin-bottom: 5px;
+    background-color: var(--navbar-hover);
+}
+
+table {
+    width: 100%;
+    margin: auto;
+    table-layout: fixed;
+    background-color: #fff;
+    border-collapse: collapse;
+    font-family: 'Comfortaa', cursive;
+}
+
+table tr:nth-child(even) {
+    color: #000;
+    background-color: #fff;
+}
+
+table tr:nth-child(odd) {
+    color: #fff;
+    background-color: var(--navbar-color);
+}
+
+table th {
+    color: #fff;
+    font-size: 14px;
+    padding: 1.5% 1.1%;
+}
+
+td {
+    font-size: 13.5px;
+    text-align: center;
+    padding: 1.65% 0.9%;
+    word-wrap: break-word;
+}
+
+/* Medium Screen */
+@media (max-width: 767px) {
+    #container {
+        padding-top: 20%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    #container {
+        padding-top: 14%;
+    }
+}
